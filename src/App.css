@@ -13,3 +13,24 @@ body{
   padding: 0 100px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
+
+/* item section */
+
+.itemSection{
+  display: flex;
+  width: 100%;
+  margin-top: 40px;
+}
+.gallery{
+  width: 150px;
+} 
+
+.gallery img{
+  width: 100%;
+}
+
+/*landing page */
+
+.landingSection{
+  padding: 0 120px;
+}
