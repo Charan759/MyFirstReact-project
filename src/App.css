@@ -34,3 +34,27 @@ body{
 .landingSection{
   padding: 0 120px;
 }
+
+/*chainsection*/
+
+.chainSection{
+  
+  display: flex;
+  overflow-x: scroll;
+  position: relative;
+  height: auto;
+}
+.vendorBox{
+  
+  border-radius: 10px;
+  
+}
+
+.vendorBox img{
+  width: 350px;
+  height: 220px;
+  flex: 0 0 auto;
+  margin-right: 30px;
+  object-fit: cover;
+  border-radius: 10px;
+}
