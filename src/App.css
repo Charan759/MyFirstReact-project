@@ -40,7 +40,7 @@ body{
 .chainSection{
   
   display: flex;
-  overflow-x: scroll;
+  overflow-x: hidden;
   position: relative;
   height: auto;
 }
