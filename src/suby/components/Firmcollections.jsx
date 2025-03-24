@@ -31,11 +31,17 @@ const Firmcollections = () => {
                     <>
                       {apple.firm.map((item)=>{
                         return(
+                          <div className='firmGroupBox'>
                           <div className='firmGroup'>
                            <img src= {`${API_URL}/uploads/${item.image}`} /> 
                           </div>
+                          <div>
+                            {item.firmName}
+                          </div>
+                          </div>
                         )
                       })}
+                      
                     </>
                   )
               })}
