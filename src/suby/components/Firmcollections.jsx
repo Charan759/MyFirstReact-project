@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import {API_URL} from '../api'
+import { Link } from 'react-router-dom'
 
 const Firmcollections = () => {
   const [firmData, setFirmData] = useState([])
@@ -31,14 +32,27 @@ const Firmcollections = () => {
                     <>
                       {apple.firm.map((item)=>{
                         return(
+                         <Link to={`/products/${item._id}`}>
                           <div className='firmGroupBox'>
                           <div className='firmGroup'>
                            <img src= {`${API_URL}/uploads/${item.image}`} /> 
+                           <div className="firmOffer">
+                           {item.offer}
+                           </div>
+                           
                           </div>
-                          <div>
-                            {item.firmName}
+                          <div className='firmDetails'>
+                                <p>{item.id}</p>
+                          <strong> 
+                                  {item.firmName}<br />
+                                  </strong>
+                                  <div className='firmArea'>{item.region.join(', ')}</div>
+                                  <div className='firmArea'>{item.area}</div>
+                                  
+                                  
                           </div>
                           </div>
+                         </Link>
                         )
                       })}
                       

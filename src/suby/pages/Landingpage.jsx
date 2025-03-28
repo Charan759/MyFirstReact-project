@@ -4,14 +4,16 @@ import Itemdisplay from '../components/Itemdisplay'
 import Chains from '../components/Chains'
 import Firmcollections from '../components/Firmcollections'
 
+
 const Landingpage = () => {
   return (
     <div>
       <TopBar />
-      <div className="landingSection">
+      {/* <div className="landingSection"> */}
       <Itemdisplay />
       <Chains />
       <Firmcollections />
+      
       </div>
       
     </div>
