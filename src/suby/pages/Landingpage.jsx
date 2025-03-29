@@ -9,14 +9,13 @@ const Landingpage = () => {
   return (
     <div>
       <TopBar />
-      {/* <div className="landingSection"> */}
+      <div className="landingSection">
       <Itemdisplay />
       <Chains />
       <Firmcollections />
-      
       </div>
-      
-    </div>
+       </div>
+
   )
 }
 
