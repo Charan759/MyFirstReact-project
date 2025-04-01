@@ -19,7 +19,12 @@ body{
   left: 0;
   z-index: 100;
   background-color: white;
+  
+}
 
+.companyTitle h2{
+  color: orangered; 
+  
 }
 
 /* item section */
@@ -65,6 +70,25 @@ body{
   margin-right: 30px;
   object-fit: cover;
   border-radius: 10px;
+}
+
+.btnSection{
+  
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  top: 50px;
+  right: 10px;
+  gap: 10px;
+}
+.btnSection button{
+  border: none;
+  background: none;
+
+}
+.btnIcons{
+  
+  font-size: x-large;
 }
 
 /* firmSection */
@@ -120,6 +144,8 @@ body{
   display: flex;
   flex-direction: column;
   padding: 0 150px;
+  margin-top: 100px;
+  
   
 }
 .productBox{
@@ -151,4 +177,13 @@ body{
 }
 .link{
   color: black;
+  text-decoration: none;  
+}
+
+/*loadersection*/
+
+.loaderSection{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
