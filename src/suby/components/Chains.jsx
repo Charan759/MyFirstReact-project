@@ -45,7 +45,7 @@ const Chains = () => {
     }
   }
   return (
-    <>
+    <div className='mediaChainSection'>
       <div className="loaderSection">
       {loading && <>
         <div className="loader">
@@ -92,7 +92,7 @@ const Chains = () => {
           )
         })}
       </section>
-    </>
+    </div>
   )
 }
 

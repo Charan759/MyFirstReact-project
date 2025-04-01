@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom'
 
 const Firmcollections = () => {
   const [firmData, setFirmData] = useState([])
-  const [selectedRegion, setSelectedRegion] = useState('All')
+  const [selectedRegion, setSelectedRegion] = useState('All');
+  const [activeCategory, setActiveCategory] = useState('all');
 
   const firmDataHandler = async () => {
     try {
@@ -24,19 +25,20 @@ const Firmcollections = () => {
     firmDataHandler();
   }, []);
 
-  const filterHandler = (region) => {
+  const filterHandler = (region, category) => {
     setSelectedRegion(region)
+    setActiveCategory(category)
   }
 
   return (
     <>
       <h3>Top Restaurants with online delivery in Hyderabad</h3>
       <div className="filterButton">
-        <button onClick={() => filterHandler("All")}>All</button>
-        <button onClick={() => filterHandler("South-Indian")}>South-Indian</button>
-        <button onClick={() => filterHandler("North-Indian")}>North-Indian</button>
-        <button onClick={() => filterHandler("Chinese")}>Chinese</button>
-        <button onClick={() => filterHandler("Bakery")}>Bakery</button>
+        <button onClick={() => filterHandler("All", 'all')} className={activeCategory === 'all' ? 'activeButton':''}>All</button>
+        <button onClick={() => filterHandler("South-Indian",'South-Indian')}className={activeCategory === 'South-Indian' ? 'activeButton':''}>South-Indian</button>
+        <button onClick={() => filterHandler("North-Indian", 'North-Indian')}className={activeCategory === 'North-Indian' ? 'activeButton':''}>North-Indian</button>
+        <button onClick={() => filterHandler("Chinese", 'Chinese')}className={activeCategory === 'Chinese' ? 'activeButton':''}>Chinese</button>
+        <button onClick={() => filterHandler("Bakery", 'Bakery')}className={activeCategory === 'Bakery' ? 'activeButton':''}>Bakery</button>
       </div>
       <section className="firmSection">
         {firmData.map((apple) => {
